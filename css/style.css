@@ -115,7 +115,7 @@ main {
   color: #000;
   font-weight: bold;
   border: none;
-  border-bottom: 3px solid #535353;
+  border-bottom: 3px solid gray;
   border-radius: 5px;
   cursor: pointer; 
   transition: .1s ease all;
