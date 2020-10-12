@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/normalize.css">
+  <title>Formulario 1!!</title>
+  <!-- <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"> -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main>
+    <h1>Regístrate ahora!</h1>
+     <form action="" class="formulario" id="formulario">
+
+       <!-- Usuario -->
+       <div class="formulario-detalle" id="formulario-usuario">
+         <label for="usuario" class="formulario-label">Usuario</label>
+         <div class="formulario-detalle-input"">
+           <input type="text" name="usuario" class="formulario-input" id="usuario" placeholder="Pepe123">
+           <i class="formulario-validacion fas fa-times-circle"></i>
+         </div>
+         <p class="formulario-input-error">El usuario debe ser de 4 a 16 dígitos y solo puede contener letras, numeros y guion bajo.</p>
+       </div>
+
+          <!-- Nombre -->
+          <div class="formulario-detalle" id="formulario-nombre">
+            <label for="nombre" class="formulario-label">Nombre</label>
+            <div class="formulario-detalle-input"">
+              <input type="text" name="nombre" class="formulario-input" id="nombre" placeholder="Pepe Heit">
+              <i class="formulario-validacion fas fa-times-circle"></i>
+            </div>
+            <p class="formulario-input-error">El nombre debe ser de 4 a 16 dígitos y solo puede contener letras, numeros y guion bajo.</p>
+          </div>
+
+           <!-- Contraseña -->
+           <div class="formulario-detalle" id="formulario-contraseña">
+            <label for="password" class="formulario-label">Contraseña</label>
+            <div class="formulario-detalle-input"">
+              <input type="password" name="password" class="formulario-input" id="password">
+              <i class="formulario-validacion fas fa-times-circle"></i>
+            </div>
+            <p class="formulario-input-error">La contraseña tiene que ser de 4 a 12 dígitos.</p>
+          </div>
+ 
+          <!-- Contraseña 2 -->
+          <div class="formulario-detalle" id="formulario-contraseña2">
+            <label for="password2" class="formulario-label">Contraseña</label>
+            <div class="formulario-detalle-input">
+              <input type="password" name="password2" class="formulario-input" id="password2">
+              <i class="formulario-validacion fas fa-times-circle"></i>
+            </div>
+            <p class="formulario-input-error">Ambas contraseñas deben ser iguales</p>
+          </div>
+
+          <!-- Coreeo -->
+          <div class="formulario-detalle" id="formulario-correo">
+            <label for="correo" class="formulario-label">Correo Electrónico</label>
+            <div class="formulario-detalle-input">
+              <input type="email" name="correo" class="formulario-input" id="correo" placeholder="pepe@pepe.net">
+                <i class="formulario-validacion fas fa-times-circle"></i>
+            </div>
+            <p class="formulario-input-error">El correo solo puede contener letras, numeros, puntos, guiones, y guion bajo.</p>
+          </div> 
+
+          <!-- Teléfono -->
+          <div class="formulario-detalle" id="formulario-telefono">
+            <label for="telefono" class="formulario-label">Teléfono</label>
+            <div class="formulario-detalle-input">
+              <input type="number" name="telefono" class="formulario-input" id="telefono" placeholder="157485160">
+              <i class="formulario-validacion fas fa-times-circle"></i>
+            </div>
+            <p class="formulario-input-error">El teléfono solo debe contener número, de 8 a 12 dígitos.</p>
+          </div> 
+
+          <!-- Terminos -->
+          <div class="formulario-terminos" id="formulario-terminos">
+            <label class="formulario-label">
+              <input class="formulario-checkbox" type="checkbox" id="terminos" name="terminos">
+              Acepto los Términos y Condiciones
+            </label>
+         </div>
+
+          <!-- Mensaje -->
+       <div class="formulario-mensaje" id="formulario-mensaje">
+        <p><i class="fas fa-exclamation-triangle"></i><strong>Error:</strong>Por favor rellena   el formulario correctamente.</p>
+       </div>
+
+         <!-- boton -->
+         <div class="formulario-boton  formulario-enviar-btn">
+         <button class="formulario-btn" type="submit">Enviar</button>
+         <p class="formulario-mensaje-exito" id="formulario-mensaje-exito">Formulario enviado exitosamente!</p> 
+         </div>
+         
+            
+     </form>
+
+  </main>
+
+
+  <script src="js/form.js"></script>
+  <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script> 
+</body>
+</html> 
