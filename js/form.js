@@ -6,10 +6,10 @@ const inputs = document.querySelectorAll('#formulario input');
 const expresiones = {
   usuario: /^[a-zA-Z0-9\-\_]{4,16}$/ ,
   nombre: /^[a-zA-ZÀ-ÿ\s]{2,40}$/,
-  password: /^.{4, 20}$/,
+  password: /^.{4,20}$/,
   correo:  /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
   telefono: /^\d{7,14}$/
-}
+};
 
 // const campos  = {
 //   usuario: false,
@@ -79,16 +79,14 @@ const validarCampo = (expresion, input, campo) => {
   } else {
      document.getElementById(`formulario-password2`).classList.remove('formulario-detalle-incorrecto');
      document.getElementById(`formulario-password2`).classList.add('formulario-detalle-correcto');
-     document.querySelector(`#formulario-password2 i`).classList.add('fa-check-circle');
      document.querySelector(`#formulario-password2 i`).classList.remove('fa-times-circle');
+     document.querySelector(`#formulario-password2 i`).classList.add('fa-check-circle');
      document.querySelector(`#formulario-password2 .formulario-input-error`).classList.remove('formulario-input-error-activo');
     //  campos['password'] = true;
    }
  
   }
 
-
- 
 inputs.forEach((input) => {
   input.addEventListener('keyup', validarFormulario);
   input.addEventListener('blur', validarFormulario);
