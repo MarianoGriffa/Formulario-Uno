@@ -10,7 +10,8 @@ body {
 
 h1 {
     text-align: center;
-    color: #000;
+    color: #134668;
+    /* color: #000; */
 }
 
 main {
@@ -29,6 +30,7 @@ main {
 .formulario-label {
     display: block;
     font-weight: 700;
+    color: #134668;
     padding: 10px;
     cursor: pointer;
 }
@@ -85,7 +87,7 @@ main {
 
 .formulario-mensaje {
   font-size: 16px;
-  background: sienna;
+  background: #ff4e4e;
   padding: 0 15px; 
   height: 45px;
   line-height: 45px;
@@ -111,11 +113,11 @@ main {
   line-height: 45px;
   width: 30%;
   font-size: 17px;
-  background: #1fab89;
-  color: #000;
+  background: #134668;
+  color: #fff;
   font-weight: bold;
   border: none;
-  border-bottom: 3px solid gray;
+  /* border-bottom: 3px solid gray; */
   border-radius: 5px;
   cursor: pointer; 
   transition: .1s ease all;
@@ -123,6 +125,8 @@ main {
 
 .formulario-btn:hover {
   box-shadow: 3px 0 30px #d7fbe8;
+  background: #134668c2;
+  color: #fff;
   cursor: pointer;
 }
 

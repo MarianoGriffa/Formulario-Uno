@@ -11,13 +11,13 @@ const expresiones = {
   telefono: /^\d{7,14}$/
 };
 
-// const campos  = {
-//   usuario: false,
-//   nombre: false,
-//   password: false,
-//   correo: false,
-//   telefono: false
-// };
+const campos  = {
+  usuario: false,
+  nombre: false,
+  password: false,
+  correo: false,
+  telefono: false
+};
 
 
 const validarFormulario = (ev) => {
@@ -53,7 +53,7 @@ const validarCampo = (expresion, input, campo) => {
      document.querySelector(`#formulario-${campo} i`).classList.add('fa-check-circle');
      document.querySelector(`#formulario-${campo} i`).classList.remove('fa-times-circle');
      document.querySelector(`#formulario-${campo} .formulario-input-error`).classList.remove('formulario-input-error-activo');
-    //  campos[campo] = true;
+     campos[campo] = true;
 
   } else {
     document.getElementById(`formulario-${campo}`).classList.add('formulario-detalle-incorrecto');
@@ -61,7 +61,7 @@ const validarCampo = (expresion, input, campo) => {
     document.querySelector(`#formulario-${campo} i`).classList.add('fa-times-circle');
     document.querySelector(`#formulario-${campo} i`).classList.remove('fa-check-circle');
     document.querySelector(`#formulario-${campo} .formulario-input-error`).classList.add('formulario-input-error-activo'); 
-    // campos[campo] = false;
+    campos[campo] = false;
   }
 }
 
@@ -75,14 +75,14 @@ const validarCampo = (expresion, input, campo) => {
     document.querySelector(`#formulario-password2 i`).classList.add('fa-times-circle');
     document.querySelector(`#formulario-password2 i`).classList.remove('fa-check-circle');
     document.querySelector(`#formulario-password2 .formulario-input-error`).classList.add('formulario-input-error-activo'); 
-    // campos['password'] = false;
+    campos['password'] = false;
   } else {
      document.getElementById(`formulario-password2`).classList.remove('formulario-detalle-incorrecto');
      document.getElementById(`formulario-password2`).classList.add('formulario-detalle-correcto');
      document.querySelector(`#formulario-password2 i`).classList.remove('fa-times-circle');
      document.querySelector(`#formulario-password2 i`).classList.add('fa-check-circle');
      document.querySelector(`#formulario-password2 .formulario-input-error`).classList.remove('formulario-input-error-activo');
-    //  campos['password'] = true;
+     campos['password'] = true;
    }
  
   }
@@ -96,4 +96,27 @@ inputs.forEach((input) => {
 
 formulario.addEventListener('submit',  (ev) =>  { 
   ev.preventDefault(); 
+
+  const terminos = document.getElementById('terminos');
+   
+
+  if (campos.usuario && campos.nombre && campos.password && campos.correo && campos.telefono && terminos.checked) {
+      formulario.reset();
+    document.getElementById('formulario-mensaje-exito').classList.add('formulario-mensaje-exito-activo');
+    
+    setTimeout( () => {
+      document.getElementById('formulario-mensaje-exito').classList.remove('formulario-mensaje-exito-activo');
+    }, 5000);  
+
+     document.getElementById('formulario-mensaje').classList.remove('formulario-mensaje-activo');
+     
+     document.querySelectorAll('.formulario-detalle-correcto').forEach((icono) => {
+      icono.classList.remove('formulario-detalle-correcto');
+  })
+
+  } else {
+    
+    document.getElementById('formulario-mensaje').classList.add('formulario-mensaje-activo');
+
+  }
 })
