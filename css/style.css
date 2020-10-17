@@ -39,6 +39,11 @@ main {
   position: relative;
 }
 
+.formulario-detalle-input:hover {
+  border: 1px groove aqua;
+}
+
+
 .formulario-input {
   width: 100%;
   padding: 0 40px 0 10px;
@@ -113,7 +118,7 @@ main {
   line-height: 45px;
   width: 30%;
   font-size: 17px;
-  background: #134668;
+  background: #1f73ab;
   color: #fff;
   font-weight: bold;
   border: none;
@@ -124,8 +129,8 @@ main {
 }
 
 .formulario-btn:hover {
-  box-shadow: 3px 0 30px #d7fbe8;
-  background: #134668c2;
+  box-shadow: 3px 0 30px #227ebb;
+  background: #1f73ab;
   color: #fff;
   cursor: pointer;
 }
