@@ -1,4 +1,3 @@
-console.log('funcionando!! soy la consola del navegador!!');
 
 const formulario = document.getElementById('formulario');
 const inputs = document.querySelectorAll('#formulario input');

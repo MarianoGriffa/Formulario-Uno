@@ -10,7 +10,9 @@ body {
 
 h1 {
     text-align: center;
-    color: #134668;
+    color: #071926;
+    font-size: 2.1em;
+    font-weight: revert;
     /* color: #000; */
 }
 
@@ -30,7 +32,7 @@ main {
 .formulario-label {
     display: block;
     font-weight: 700;
-    color: #134668;
+    color: #071926;
     padding: 10px;
     cursor: pointer;
 }
