@@ -9,7 +9,7 @@ const expresiones = {
   correo:  /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
   telefono: /^\d{7,14}$/
 };
-
+ 
 const campos  = {
   usuario: false,
   nombre: false,
@@ -90,7 +90,6 @@ inputs.forEach((input) => {
   input.addEventListener('keyup', validarFormulario);
   input.addEventListener('blur', validarFormulario);
 })
-
 
 
 formulario.addEventListener('submit',  (ev) =>  { 
